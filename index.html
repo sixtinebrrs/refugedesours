@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalet</title>
+  <link rel="stylesheet" href="projet.css" />
+</head>
+
+
+
+<header class="header-container">
+    <div class="top-header">
+      <div class="left-section">
+        <select class="lang-select" onchange="switchLanguage(this)">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+        <span class="phone">
+          📞 +33 6 60 89 15 84
+        </span>
+      </div>
+  
+      <div class="logo-section">
+        <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+      </div>
+  
+      <div class="cta-section">
+        <a href="#reservation" class="reserve-btn">Réservez maintenant</a>
+      </div>
+    </div>
+  
+    <nav class="main-nav">
+      <ul>
+        <li><a href="project.html" class="active">Accueil</a></li>
+        
+        <!--gives the different options of the chalet-->
+        <li class="dropdown">
+            <a href="#">Le Chalet ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="rooms.html">Les Chambres</a></li>
+              <li><a href="services.html">Les Services</a></li>
+              <li><a href="photos.html">Photos</a></li>
+            </ul>
+          </li>
+        <li><a href="tarif.html">Nos tarifs </a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Chalet de luxe "Le Refuge des Ours"</h1>
+      <p>Chalet de Charme à moins de 200 m des pistes de ski .</p>
+      <a href="#reservation" class="btn">Réserver maintenant</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h2>À propos du Chalet</h2>
+        <p>
+          Bienvenue au <strong>Refuge des Ours</strong>, un chalet de charme situé à moins de 200 m des pistes de ski.
+          Profitez d’un espace de vie spacieux (70 m²) ouvert entre salon, salle à manger et cuisine, idéal pour partager des moments conviviaux.
+          <br><br>
+          Il dispose de 4 chambres doubles et d’un dortoir de 6 lits, ainsi qu’une grande terrasse équipée pour vos repas et vos siestes au soleil.
+        </p>
+      </div>
+      <div class="about-gallery grid-layout">
+        <img src="ext.jpg" alt="Vue extérieure du chalet" />
+        <img src="salon.jpg" alt="Salon spacieux et chaleureux" />
+        <img src="2lits160.jpg" alt="Chambre double confortable" />
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .about-gallery.custom-layout {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .about-gallery .row {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  
+    .about-gallery .row.center {
+      justify-content: center;
+    }
+  
+    .about-gallery img {
+      width: 100%;
+      max-width: 480px;
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  </style>
+
+
+  <!-- Caractéristiques -->
+  <section class="features">
+    <h2>Caractéristiques</h2>
+    <ul>
+      <li>Surface : 200 m²</li>
+      <li>Capacité : 14 personnes</li>
+      <li>Chambres : 5</li>
+      <li>Salles de bain : 3</li>
+      <li>Sanitaires : 2</li>
+      <li>Terrasse avec table extérieure et transats</li>
+      <li>Salle de jeux avec baby-foot et Xbox</li>
+      <li>Salle de sport avec rameur et elliptique</li>
+      <li>Parking privé</li>
+      <li>Local à skis privé</li>
+    </ul>
+  </section>
+
+<!-- Services -->
+<section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Location de draps (15€)</li>
+      <li>Location de linge de maison (15€)</li>
+      <li>Ménage inclus</li>
+      <li>Bois fourni</li>
+      <li>Lits faits à l'arrivée (30€)</li>
+    </ul>
+  </section>
+
+  <!-- Equipements -->
+  <section class="equipment">
+    <h2>Équipements</h2>
+    <ul>
+      <li>Four</li>
+      <li>Machine à laver</li>
+      <li>Lave-vaisselle</li>
+      <li>Télévision</li>
+      <li>Micro-ondes</li>
+      <li>Sèche-linge</li>
+      <li>Internet WIFI</li>
+      <li>Récepteur satellite</li>
+      <li>Appareil à raclette</li>
+      <li>Congélateur</li>
+    </ul>
+  </section>
+
+
+  <section class="infos-complementaires">
+    <h2>Informations complémentaires</h2>
+    <ul>
+      <li>Heure de départ en fin de séjour : <strong>10h00</strong></li>
+      <li>Heure d'arrivée en début de séjour : <strong>17h00</strong></li>
+      <li>Pourcentage d'acompte ou d'arrhes : <strong>30%</strong></li>
+      <li>Caution / Dépôt de garantie : <strong>2000 €</strong></li>
+      <li>Location du dimanche au dimanche : <strong>Oui</strong></li>
+      <li>Montant des charges : <strong>Incluses</strong></li>
+      <li>Taxe de séjour : <strong>Incluses</strong></li>
+      <li>Numéro de déclaration en mairie : <strong>INFORMATION OBLIGATOIRE</strong></li>
+      <li>
+        <strong>Conditions d'annulation</strong> : Annulation impossible hors cas de force majeure, (Le locataire doit prendre une assurance annulation). </li>
+    </ul>
+  </section>
+  
+
+
+  <!-- Reservation Form -->
+  <section id="reservation" class="reservation">
+    <h2>Faire une réservation</h2>
+    <form action="https://formspree.io/f/xbloverq" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <input type="tel" name="phone" placeholder="Votre téléphone" required />
+      <label for="checkin">Date d'arrivée :</label>
+      <input type="date" name="checkin" required />
+      <label for="checkout">Date de départ :</label>
+      <input type="date" name="checkout" required />
+      <label for="guests">Nombre de personnes :</label>
+      <select name="guests" required>
+        <option value="">Sélectionner</option>
+        <option value="1-5">1-5</option>
+        <option value="6-10">6-10</option>
+        <option value="11-15">11-15</option>
+      </select>
+      <button style="background-color: burlywood;" type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Address: 619 Route du Boule, 73590 Saint-Nicolas-la-Chapelle, France</p>
+    <p>Téléphone: +33 6 60 89 15 84 </p>
+    <p>Email:alinebarrois1973@gmail.com
+    <div class="map">
+      <!-- Embed Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.1050446992155!2d6.475802676544056!3d45.80372297108168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba771268debe3%3A0x72c772746cbdfdc9!2s619%20Rte%20du%20Boule%2C%2073590%20Saint-Nicolas-la-Chapelle%2C%20France!5e0!3m2!1sfr!2sfr!4v1713459410287!5m2!1sfr!2sfr"></iframe>
+    </div>
+  </section>
+
+  <script src="projet.js"></script>
+
+</body>
+</html>

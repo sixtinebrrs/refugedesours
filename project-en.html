@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalet</title>
+  <link rel="stylesheet" href="projet.css" />
+</head>
+
+
+
+<header class="header-container">
+  <div class="top-header">
+    <div class="left-section">
+      <select class="lang-select" onchange="switchLanguage(this)">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+      <span class="phone">📞 +33 6 60 89 15 84</span>
+    </div>
+
+    <div class="logo-section">
+      <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+    </div>
+
+    <div class="cta-section">
+      <a href="#reservation" class="reserve-btn">Book now</a>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="project-en.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="#">The Chalet ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="room-en.html">Rooms</a></li>
+          <li><a href="services-en.html">Services</a></li>
+          <li><a href="photos-en.html">Photos</a></li>
+        </ul>
+      </li>
+      <li><a href="tarifs-en.html">Rates</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Luxury Chalet "Le Refuge des Ours"</h1>
+      <p>Charming Chalet less than 200m from the ski slopes.</p>
+      <a href="#reservation" class="btn">Book now</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h2>About the Chalet</h2>
+        <p>
+          Welcome to <strong>Refuge des Ours</strong>, a charming chalet located less than 200 meters from the ski slopes.
+          Enjoy a spacious living area (70 m²) open to the living room, dining room, and kitchen—perfect for sharing convivial moments.
+          <br><br>
+          It features 4 double bedrooms and a dormitory with 6 beds, as well as a large terrace equipped for your meals and sunbathing.
+        </p>
+      </div>
+      <div class="about-gallery grid-layout">
+      <img src="ext.jpg" alt="Vue extérieure du chalet" />
+        <img src="salon.jpg" alt="Salon spacieux et chaleureux" />
+        <img src="2lits160.jpg" alt="Chambre double confortable" />
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .about-gallery.custom-layout {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .about-gallery .row {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  
+    .about-gallery .row.center {
+      justify-content: center;
+    }
+  
+    .about-gallery img {
+      width: 100%;
+      max-width: 480px;
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  </style>
+
+
+  
+
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Area: 200 m²</li>
+      <li>Capacity: 14 guests</li>
+      <li>Bedrooms: 5 (4 double rooms, 1 dormitory with 6 beds)</li>
+      <li>Bathrooms: 3</li>
+      <li>Toilets: 2</li>
+      <li>Terrace with outdoor table and loungers</li>
+      <li>Game room with foosball and Xbox</li>
+      <li>Gym with rower and elliptical</li>
+      <li>Private parking</li>
+      <li>Private ski room</li>
+    </ul>
+  </section>
+
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Bed linen rental (€15)</li>
+      <li>Towel rental (€15)</li>
+      <li>Cleaning included</li>
+      <li>Firewood provided</li>
+      <li>Beds made on arrival (€30)</li>
+    </ul>
+  </section>
+
+  <section class="equipment">
+    <h2>Equipment</h2>
+    <ul>
+      <li>Oven</li>
+      <li>Washing machine</li>
+      <li>Dishwasher</li>
+      <li>Television</li>
+      <li>Microwave</li>
+      <li>Tumble dryer</li>
+      <li>WiFi Internet</li>
+      <li>Satellite receiver</li>
+      <li>Raclette grill</li>
+      <li>Freezer</li>
+    </ul>
+  </section>
+
+
+  <section class="infos-complementaires">
+    <h2>Additional Information</h2>
+    <ul>
+      <li>Departure time at end of stay: <strong>10:00 AM</strong></li>
+      <li>Arrival time at start of stay: <strong>5:00 PM</strong></li>
+      <li>Deposit or down payment percentage: <strong>30%</strong></li>
+      <li>Security deposit / Guarantee: <strong>€2000</strong></li>
+      <li>Sunday to Sunday rental: <strong>Yes</strong></li>
+      <li>Amount of charges: <strong>Included</strong></li>
+      <li>Tourist tax: <strong>Included</strong></li>
+      <li>Declaration number at town hall: <strong>MANDATORY INFORMATION</strong></li>
+    </ul>
+  </section>
+  
+
+  <section id="reservation" class="reservation">
+    <h2>Make a Reservation</h2>
+    <form id="reservation-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required />
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required />
+      <label for="guests">Select guests:</label>
+      <select id="guests" required>
+        <option value="">Select</option>
+        <option value="1-5">1-5</option>
+        <option value="6-10">6-10</option>
+        <option value="11-15">11-15</option>
+      </select>
+      <button style= "background-color: burlywood;" type="submit">Send</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Address: 619 Route du Boule, 73590 Saint-Nicolas-la-Chapelle, France</p>
+    <p>Phone: +33 </p>
+    <p>Email:alinebarrois1973@gmail.com
+    <div class="map">
+      <!-- Embed Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.1050446992155!2d6.475802676544056!3d45.80372297108168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba771268debe3%3A0x72c772746cbdfdc9!2s619%20Rte%20du%20Boule%2C%2073590%20Saint-Nicolas-la-Chapelle%2C%20France!5e0!3m2!1sfr!2sfr!4v1713459410287!5m2!1sfr!2sfr"></iframe>
+    </div>
+  </section>
+
+  <script src="projet.js"></script>
+
+</body>
+</html>

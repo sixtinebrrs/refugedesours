@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Le Refuge des Ours</title>
+  <link rel="stylesheet" href="projet.css" />
+  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('entree.jpg') center/cover no-repeat fixed;
+      background-blend-mode: darken;
+      color: #fff;
+    }
+    .services-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .services-section h2 {
+      color: #a47f50;
+      font-size: 1.8rem;
+      margin-top: 30px;
+    }
+    .services-section ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .services-section ul li {
+      background: #f8f4ef;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container">
+    <div class="top-header">
+      <div class="left-section">
+        <select class="lang-select" onchange="switchLanguage(this)">
+          <option value="fr" selected>Français</option>
+          <option value="en">English</option>
+        </select>
+        <span class="phone">📞 +33 6 60 89 15 84</span>
+      </div>
+      <div class="logo-section">
+        <img src="alpes.jpg" alt="Logo du Chalet" class="logo">
+      </div>
+      <div class="cta-section">
+        <a href="project.html#reservation" class="reserve-btn">Réservez maintenant</a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="project.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#">Le Chalet ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="rooms.html">Les Chambres</a></li>
+            <li><a href="services.html" class="active">Les Services</a></li>
+            <li><a href="photos.html">Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="tarif.html">Nos tarifs</a></li>
+        <li><a href="avis_clients.html">Avis clients</a></li>
+        
+
+  
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services-section">
+    <style>
+      .services-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        background: #f8f4ef;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      .services-list li i {
+        font-size: 1.2rem;
+        color: #a47f50;
+      }
+    </style>
+  
+    <h2>Services</h2>
+    <ul class="services-list">
+      <li><i class="fas fa-bed"></i><span>Location de draps (15€)</span></li>
+      <li><i class="fas fa-bath"></i><span>Location de linge de maison (15€)</span></li>
+      <li><i class="fas fa-broom"></i><span>Ménage inclus</span></li>
+      <li><i class="fas fa-fire"></i><span>Bois fourni</span></li>
+      <li><i class="fas fa-check-circle"></i><span>Lits faits à l'arrivée (30€)</span></li>
+      <li><i class="fas fa-hands-helping"></i><span>Assistance locale pendant le séjour</span></li>
+      <li><i class="fas fa-map-marked-alt"></i><span>Conseils d’activités dans la région</span></li>
+      <li><i class="fas fa-wifi"></i><span>Accès Wi-Fi gratuit</span></li>
+    </ul>
+  
+    <h2>Équipements</h2>
+    <ul class="services-list">
+      <li><i class="fas fa-utensils"></i><span>Four</span></li>
+      <li><i class="fas fa-water"></i><span>Machine à laver</span></li>
+      <li><i class="fas fa-box-open"></i><span>Lave-vaisselle</span></li>
+      <li><i class="fas fa-tv"></i><span>Télévision</span></li>
+      <li><i class="fas fa-mug-hot"></i><span>Micro-ondes</span></li>
+      <li><i class="fas fa-tshirt"></i><span>Sèche-linge</span></li>
+      <li><i class="fas fa-wifi"></i><span>Internet WIFI</span></li>
+      <li><i class="fas fa-satellite"></i><span>Récepteur satellite</span></li>
+      <li><i class="fas fa-blender"></i><span>Appareil à raclette</span></li>
+      <li><i class="fas fa-snowflake"></i><span>Congélateur</span></li>
+    </ul>
+  
+    <h2>Commodités</h2>
+    <ul class="services-list">
+      <li><i class="fas fa-couch"></i><span>Terrasse avec table extérieure et transats</span></li>
+      <li><i class="fas fa-futbol"></i><span>Salle de jeux avec baby-foot et Xbox</span></li>
+      <li><i class="fas fa-dumbbell"></i><span>Salle de sport avec rameur et elliptique</span></li>
+      <li><i class="fas fa-parking"></i><span>Parking privé</span></li>
+      <li><i class="fas fa-skiing"></i><span>Local à skis privé</span></li>
+    </ul>
+  </section>
+  
+  
+
+  <script src="projet.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rates & Availability - Le Refuge des Ours</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="tarifs.css" />
+  
+  <style>
+    body {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('entree.jpg') center/cover no-repeat fixed;
+      background-blend-mode: darken;
+      color: #fff;
+    }
+    .photo-gallery {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .photo-gallery h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #a47f50;
+    }
+    .tariffs h2,
+    .legend,
+    .calendar-controls,
+    .calendar,
+    #selected-dates,
+    .confirm-btn {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container">
+    <div class="top-header">
+      <div class="left-section">
+        
+        <span class="phone">📞 +33 6 60 89 15 84</span>
+      </div>
+      <div class="logo-section">
+        <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+      </div>
+      <div class="cta-section">
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="project-en.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">The Chalet ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="room-en.html">Rooms</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="photos-en.html">Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="tarifs-en.html" class="active">Rates</a></li>
+        
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="photo-gallery">
+    <h1>Rates & Availability</h1>
+
+    <div class="legend">
+      <div><span class="legend-box available"></span> Available</div>
+      <div><span class="legend-box booked"></span> Booked</div>
+      <div><span class="legend-box promo"></span> Promotion</div>
+    </div>
+
+    <div class="calendar-controls">
+      <button id="prevMonth" aria-label="Previous Month"><i class="fas fa-arrow-left"></i></button>
+      <h2 id="monthYear"></h2>
+      <button id="nextMonth" aria-label="Next Month"><i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div class="calendar" id="calendar">
+      <!-- Calendar grid injected here by JS -->
+    </div>
+
+    <div id="selected-dates" style="margin-top: 20px; font-weight: bold;"></div>
+    <button id="confirmDates" class="confirm-btn">Confirm Dates</button>
+
+    <div class="tariffs">
+      <h2>Weekly Rates</h2>
+      <ul>
+        <li>July 26 - August 2 : €3000 / 7 nights</li>
+        <li>August 2 - August 9 : €3000 / 7 nights</li>
+        <li>August 9 - August 16 : €3000 / 7 nights</li>
+        <li>August 16 - August 23 : €3000 / 7 nights</li>
+        <li>August 23 - August 30 : €3000 / 7 nights</li>
+        <li>August 30 - September 6 : €3000 / 7 nights</li>
+        <li>September 6 - September 13 : €3000 / 7 nights</li>
+        <li>September 13 - September 20 : €3000 / 7 nights</li>
+        <li>September 20 - September 27 : €3000 / 7 nights</li>
+        <li>September 27 - October 4 : €3000 / 7 nights</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="tarifs.js"></script>
+</body>
+</html>

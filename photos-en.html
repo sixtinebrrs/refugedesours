@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Photos - Le Refuge des Ours</title>
+  <link rel="stylesheet" href="projet.css">
+
+  <style>
+    .photo-gallery {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .photo-gallery h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #a47f50;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ===== LIGHTBOX ===== */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header-container">
+  <div class="top-header">
+    <div class="left-section">
+      <select class="lang-select">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+      <span class="phone">📞 +33 6 60 89 15 84</span>
+    </div>
+    <div class="logo-section">
+      <img src="alpes.jpg" alt="Chalet Logo" class="logo">
+    </div>
+    <div class="cta-section">
+      <a href="project.html#reservation" class="reserve-btn">Réservez maintenant</a>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="project.html">Accueil</a></li>
+      <li class="dropdown">
+        <a href="#">Le Chalet ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="rooms.html">Les Chambres</a></li>
+          <li><a href="services.html">Les Services</a></li>
+          <li><a href="photos.html" class="active">Photos</a></li>
+        </ul>
+      </li>
+      <li><a href="tarif.html">Nos tarifs</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="photo-gallery">
+  <h1>Galerie Photos</h1>
+
+  <div class="gallery-grid">
+    <img src="ext.jpg">
+    <img src="salon.jpg">
+    <img src="2lits160.jpg">
+    <img src="1lit140.jpg">
+    <img src="dortoir.jpg">
+    <img src="cuis.jpg">
+    <img src="chambre.jpg">
+    <img src="man.jpg">
+    <img src="lin.jpg">
+    <img src="2lits80.jpg">
+    <img src="ext2.jpg">
+    <img src="1lit.jpg">
+    <img src="entree.jpg">
+    <img src="sdb1.1.jpg">
+    <img src="sdb1.2.jpg">
+    <img src="sdb2.1.jpg">
+    <img src="sdb2.2.jpg">
+    <img src="entree.jpg">
+    <img src="entree1.jpg">
+    <img src="detail.jpg">
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  const images = document.querySelectorAll(".gallery-grid img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>
